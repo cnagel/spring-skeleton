@@ -10,9 +10,9 @@
 	<url>http://bits-and-kites.blogspot.com</url>
 
 	<scm>
-		<url>https://github.com/cnagel/github-maven-example</url>
-		<connection>scm:git:git://github.com/cnagel/github-maven-example.git</connection>
-		<developerConnection>scm:git:git@github.com:cnagel/github-maven-example.git</developerConnection>
+		<url>https://github.com/cnagel/spring-skeleton</url>
+		<connection>scm:git:git://github.com/cnagel/spring-skeleton.git</connection>
+		<developerConnection>scm:git:git@github.com:cnagel/spring-skeleton.git</developerConnection>
 	</scm>
 
 	<developers>
