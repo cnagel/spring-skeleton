@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.surpreso</groupId>
+	<artifactId>spring-skeleton</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>Surpreso Spring skeleton</name>
+	<description>A simple but solid Spring skeleton. Will be extended step by step.</description>
+	<url>http://bits-and-kites.blogspot.com</url>
+
+	<scm>
+		<url>https://github.com/cnagel/github-maven-example</url>
+		<connection>scm:git:git://github.com/cnagel/github-maven-example.git</connection>
+		<developerConnection>scm:git:git@github.com:cnagel/github-maven-example.git</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<email>c.nagel1982@gmail.com</email>
+			<name>Christoph Nagel</name>
+			<url>https://github.com/cnagel</url>
+			<id>cnagel</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<spring.version>3.2.3.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+		<!-- Spring context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring JDBC support -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring testing component -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Imports the @inject Annotation -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<!-- Google guava library -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>r09</version>
+		</dependency>
+		<!-- Apache Commons libraray -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+		</dependency>
+	</dependencies>
+</project>
