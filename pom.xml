@@ -11,6 +11,7 @@
 	<description>A simple but solid Spring skeleton. Will be extended step by step.</description>
 	<url>http://bits-and-kites.blogspot.com</url>
 
+	<!-- The packaging format, use war for web projects -->
 	<packaging>jar</packaging>
 
 	<scm>
@@ -29,6 +30,7 @@
 	</developers>
 
 	<properties>
+		<!-- The main class to start by executing java -jar -->
 		<start-class>com.surpreso.spring_skeleton.HelloWorldApplication</start-class>
 	</properties>
 
@@ -40,20 +42,24 @@
 	</parent>
 
 	<dependencies>
+		<!-- Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<!-- Spring Boot Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- YAML parser -->
 		<dependency>
 			<groupId>org.yaml</groupId>
 			<artifactId>snakeyaml</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- @Inject annotation -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -61,9 +67,9 @@
 		</dependency>
 	</dependencies>
 
-	<!-- Package as an executable JAR -->
 	<build>
 		<plugins>
+			<!-- Use plugin to package as an executable JAR -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -88,6 +94,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-snapshots</id>

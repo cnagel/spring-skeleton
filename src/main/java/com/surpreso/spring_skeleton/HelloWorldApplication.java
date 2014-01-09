@@ -25,8 +25,8 @@ public class HelloWorldApplication implements CommandLineRunner {
 	}
 
 	public void run(String... args) throws Exception {
-		System.out.println(helloWorldService.getVersion());
-
+		System.out.println("This application works on version "
+				+ helloWorldService.getVersion());
 	}
 
 }
