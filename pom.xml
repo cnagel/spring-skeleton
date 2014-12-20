@@ -4,10 +4,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.surpreso</groupId>
+	<groupId>cnagel</groupId>
 	<artifactId>spring-skeleton</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
-	<name>Surpreso Spring skeleton</name>
+	<version>0.0.3-SNAPSHOT</version>
+	<name>Spring skeleton</name>
 	<description>A simple but solid Spring skeleton. Will be extended step by step.</description>
 	<url>http://bits-and-kites.blogspot.com</url>
 
@@ -29,16 +29,11 @@
 		</developer>
 	</developers>
 
-	<properties>
-		<!-- The main class to start by executing java -jar -->
-		<start-class>com.surpreso.spring_skeleton.HelloWorldApplication</start-class>
-	</properties>
-
 	<!-- Inherit defaults from Spring Boot -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.0.0.BUILD-SNAPSHOT</version>
+		<version>1.2.0.RELEASE</version>
 	</parent>
 
 	<dependencies>
@@ -53,57 +48,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- YAML parser -->
-		<dependency>
-			<groupId>org.yaml</groupId>
-			<artifactId>snakeyaml</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<!-- @Inject annotation -->
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<!-- Use plugin to package as an executable JAR -->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
-	<!-- Allow access to Spring milestones and snapshots -->
-	<repositories>
-		<repository>
-			<id>spring-snapshots</id>
-			<url>http://repo.spring.io/libs-snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spring-milestones</id>
-			<url>http://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-snapshots</id>
-			<url>http://repo.spring.io/snapshot</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>spring-milestones</id>
-			<url>http://repo.spring.io/milestone</url>
-		</pluginRepository>
-	</pluginRepositories>
 
 </project>

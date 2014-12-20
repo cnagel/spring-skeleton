@@ -1,23 +1,22 @@
 package com.surpreso.spring_skeleton;
 
-import javax.inject.Inject;
-
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.annotation.Import;
-
-import com.surpreso.spring_skeleton.config.DefaultConfig;
-import com.surpreso.spring_skeleton.services.HelloWorldService;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * A simple "Hello world" application using Spring Boot.
  * 
  * @author Christoph Nagel
  */
-@Import(DefaultConfig.class)
+@ComponentScan
+@EnableAutoConfiguration
 public class HelloWorldApplication implements CommandLineRunner {
 
-	@Inject
+	@Autowired
 	private HelloWorldService helloWorldService;
 
 	public static void main(String... args) {
@@ -25,8 +24,9 @@ public class HelloWorldApplication implements CommandLineRunner {
 	}
 
 	public void run(String... args) throws Exception {
-		System.out.println("This application works on version "
-				+ helloWorldService.getVersion());
+		LoggerFactory.getLogger(getClass()).info(
+				"This application works on version "
+						+ helloWorldService.getVersion());
 	}
 
 }

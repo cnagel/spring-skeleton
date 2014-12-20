@@ -2,24 +2,23 @@ package com.surpreso.spring_skeleton.services;
 
 import static org.junit.Assert.assertTrue;
 
-import javax.inject.Inject;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationContextLoader;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.surpreso.spring_skeleton.config.DefaultConfig;
-import com.surpreso.spring_skeleton.services.HelloWorldService;
+import com.surpreso.spring_skeleton.HelloWorldApplication;
+import com.surpreso.spring_skeleton.HelloWorldService;
 
 @ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = DefaultConfig.class, loader = SpringApplicationContextLoader.class)
+@ContextConfiguration(classes = HelloWorldApplication.class, loader = SpringApplicationContextLoader.class)
 public class HelloWorldServiceTests {
 
-	@Inject
+	@Autowired
 	HelloWorldService service;
 
 	@Test

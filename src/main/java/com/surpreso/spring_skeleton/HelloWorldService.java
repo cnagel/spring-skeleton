@@ -1,4 +1,4 @@
-package com.surpreso.spring_skeleton.services;
+package com.surpreso.spring_skeleton;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
