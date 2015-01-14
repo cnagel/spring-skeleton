@@ -1,4 +1,4 @@
-package com.surpreso.spring_skeleton.services;
+package com.surpreso.spring_skeleton;
 
 import static org.junit.Assert.assertTrue;
 
@@ -10,12 +10,12 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.surpreso.spring_skeleton.HelloWorldApplication;
+import com.surpreso.spring_skeleton.DefaultConfig;
 import com.surpreso.spring_skeleton.HelloWorldService;
 
 @ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = HelloWorldApplication.class, loader = SpringApplicationContextLoader.class)
+@ContextConfiguration(classes = DefaultConfig.class, loader = SpringApplicationContextLoader.class)
 public class HelloWorldServiceTests {
 
 	@Autowired
